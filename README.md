@@ -99,3 +99,9 @@ This is the place for you to write reflections:
 3. Menurut saya Postman sangat berguna karena dapat menampilkan apakah logic dari aplikasi yang kita buat sudah tepat atau belum. Hal ini sangat memudahkan developer dalam melakukan debugging dan menentukan masalah dari aplikasi yang dibuat.
 
 #### Reflection Publisher-3
+
+1. Pada tutorial kali ini, kita memanfaatkan push model. Ketika kita melakukan sesuatu pada modul objek misalnya create, delete, atau update, maka notification service akan memanggil method yang mengintegrasi subscriber untuk mendapatkan update terbarunya.
+
+2. Model Pull memiliki keuntungan dalam mengurangi dependensi antara subscriber dan data yang diawasi, karena subscriber dapat secara independent meminta informasi terbaru sesuai kebutuhan mereka. Namun, model ini juga meningkatkan kompleksitas sistem dan memiliki risiko akan menimbulkan overload jika subscriber terlalu sering melakukan request. Selain itu, metode ini mungkin tidak efisien dalam situasi di mana data berubah secara cepat dan kontinu, karena pembaruan tidak disampaikan secara real-time kecuali diminta oleh subscriber.
+
+3. Apabila proses notifikasi tidak menggunakan multi-threading, setiap subscriber akan diberi tahu secara bergantian, yang bisa menyebabkan keterlambatan dalam pengiriman notifikasi ke masing-masing subscriber. Hal ini mengakibatkan respons dari program secara keseluruhan melambat. Keadaan ini kurang ideal pada aplikasi yang memerlukan response time dengan cepat, misalnya dalam aplikasi real-time atau ketika jumlah subscriber sangat besar.
