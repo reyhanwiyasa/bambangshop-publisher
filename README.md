@@ -92,4 +92,10 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. Memisahkan service dan controller dari model digunakan untuk meningkatkan maintainability, reusability, testability, dan scalibility. Hal ini dimungkinkan karena kita dapat mengubah business logic pada services, data akses pada repository, dan domain pada model dapat dilakukan secara terpisah sehingga mengurangi risiko munculnya bug.
+
+2. Apabila hanya menggunakan model, maka maintanability akan sangat sulit dicapai. Hal ini disebabkan apabila terdapat perubahan pada kode, maka kita harus mengubah semua konsep yang ada, seperti model, data akses, dan logika. Di mana hal tersebut sangat berisiko tinggi dalam menimbulkan bug.
+
+3. Menurut saya Postman sangat berguna karena dapat menampilkan apakah logic dari aplikasi yang kita buat sudah tepat atau belum. Hal ini sangat memudahkan developer dalam melakukan debugging dan menentukan masalah dari aplikasi yang dibuat.
+
 #### Reflection Publisher-3
